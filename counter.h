@@ -12,11 +12,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+
 using namespace std;
-atomic<int> version(0);
-#define THRESHOLD 1000
-unordered_map<thread::id,int> map;
-#define C 3
+
+#define THRESHOLD 500
+#define C 4
 
 struct node{
     int counter=0;
@@ -32,7 +32,7 @@ struct node{
 
 struct OpDesc{
     int x;
-    int version=-1;
+    double version=-1;
     public:
     OpDesc(int a,int b){
         x=a;
@@ -40,13 +40,13 @@ struct OpDesc{
     }
 
 };
-mutex lock2;
- atomic<node*> counter;
- atomic<OpDesc*> platform[C];
 
-int getThreadId();
-int getVersion();
-void help(int);
-void WFIncrement(int);
-void announce(int,int);
-int stick_this_thread_to_core(int);
+atomic<node*> counter;
+atomic<OpDesc*> platform[C];
+
+
+double getVersion();
+void announce(int,double,int);
+void help(double);
+void WFIncrement(int,int);
+void threadIncrement(int,int);
