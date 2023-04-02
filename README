@@ -1,3 +1,8 @@
+The first implementaion of a wait free counter in C++.
+
+To run:make clean;make
+
+Progress Guarantee:
 1.In node:
     1.1 index-id of thread for which counter has been incremeneted.Can be incremeneted by another thread in help
     1.2 state-in which function incremenet takes place("increment" or "help")
