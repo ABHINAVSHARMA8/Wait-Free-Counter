@@ -1,6 +1,6 @@
-The first implementaion of a wait free counter in C++.
+The first software implementaion of a wait free counter in C++.
 
-To run:make clean;make
+
 
 Progress Guarantee:
 1.In node:

@@ -80,7 +80,7 @@ void WFIncrement(int x,int tid){
     }
     
     if(tried==THRESHOLD) {
-        delete temp;
+        //delete temp; TODO: Lock free memory reclamation
         announce(x,version,tid);
     }
     
