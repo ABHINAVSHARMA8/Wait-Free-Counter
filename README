@@ -1,6 +1,6 @@
 The first software implementaion of a wait free counter in C++.
 
-Authors: Siddharth Nayak(siddharth22128@iiitd.ac.in), Abhinav Sharma(abhinav19006@iiitd.ac.in)
+Authors: Abhinav Sharma(abhinav19006@iiitd.ac.in), Siddharth Nayak(siddharth22128@iiitd.ac.in)
 
 Progress Guarantee:
 1.In node:
